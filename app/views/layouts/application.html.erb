@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>SampleApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <a href="#" class="brand">StorySip</a>
+    <ul class="nav">
+    	<li><%= link_to "Home", statuses_path %></li>
+    	<li><%= link_to "New", new_status_path %></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+	<%= yield %>
+</div>
 </body>
 </html>
